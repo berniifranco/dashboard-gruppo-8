@@ -19,7 +19,7 @@ function Sidebar () {
 				</a>
 			</li>
 
-			<hr classNameass="sidebar-divider" />
+			<hr className="sidebar-divider" />
 
 			<div className="sidebar-heading">Actions</div>
 

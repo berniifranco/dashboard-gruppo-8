@@ -15,7 +15,8 @@ function Sidebar () {
 			<li className="nav-item active">
 				<a className="nav-link" href="/">
 					<i className="fas fa-fw fa-tachometer-alt"></i>
-					<span>Dashboard</span></a>
+					<span>Dashboard</span>
+				</a>
 			</li>
 
 			<hr classNameass="sidebar-divider" />
@@ -32,13 +33,15 @@ function Sidebar () {
 			<li className="nav-item">
 				<a className="nav-link" href="/">
 					<i className="fas fa-fw fa-chart-area"></i>
-					<span>Charts</span></a>
+					<span>Charts</span>
+				</a>
 			</li>
 
 			<li className="nav-item">
 				<a className="nav-link" href="/">
 					<i className="fas fa-fw fa-table"></i>
-					<span>Tables</span></a>
+					<span>Tables</span>
+				</a>
 			</li>
 
 			<hr className="sidebar-divider d-none d-md-block" />

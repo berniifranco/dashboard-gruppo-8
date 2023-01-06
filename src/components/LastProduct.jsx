@@ -8,10 +8,10 @@ function LastProduct () {
             .then(vehiculoss => {
                 let camionId = [];
                 vehiculoss.map((camion) => {
-                    camionId.push(camion.id)
+                    return camionId.push(camion.id)
                 })
                 let ultimoId = Math.max(...camionId);
-                let ultimoVehiculo = vehiculoss.filter((camion) => {return camion.id == ultimoId});
+                let ultimoVehiculo = vehiculoss.filter((camion) => {return camion.id === ultimoId});
                 setVehiculos(ultimoVehiculo);
             })
             .catch(err => console.log(err))

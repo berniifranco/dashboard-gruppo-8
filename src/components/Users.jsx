@@ -32,7 +32,7 @@ function Users () {
                             </div>
                           
                          
-                            <div className="h5 mb-0 font-weight-bold text-gray-800"> {usuarios} </div>
+                            <div className="h5 mb-0 font-weight-bold text-gray-800"> {usuarios.length === 0 && 'Cargando...'}{usuarios} </div>
                                 
                          
                         </div>

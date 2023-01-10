@@ -12,6 +12,15 @@ function AmmountInProducts () {
             .catch(err => console.log(err))
     }, []);
 
+    useEffect(() => {
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/marcasCantidad')
+            .then(resultado => {return resultado.json()})
+            .then(marcas => {
+                setMarcas(marcas);
+            })
+            .catch(err => console.log(err))
+    }, [marcas]);
+
     return (
         <div className="col-md-4 mb-4">
             <div className="card border-left-success shadow h-100 py-2">

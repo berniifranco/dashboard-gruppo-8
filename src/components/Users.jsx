@@ -13,6 +13,15 @@ function Users () {
             .catch(err => console.log(err))
     }, []);
 
+    useEffect(() => {
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/usuariosCantidad')
+            .then(resultado => {return resultado.json()})
+            .then(usuarios => {
+                setUsuarios(usuarios);
+            })
+            .catch(err => console.log(err))
+    }, [usuarios]);
+
     return (
         <div className="col-md-4 mb-4">
             <div className="card border-left-warning shadow h-100 py-2">

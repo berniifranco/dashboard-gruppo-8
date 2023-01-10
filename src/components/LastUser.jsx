@@ -16,6 +16,22 @@ function LasUser () {
             })
             .catch(err => console.log(err))
     }, []);
+
+    useEffect(() => {
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/usuarios')
+            .then(resultado => {return resultado.json()})
+            .then(usuarios => {
+                let usuarioId = [];
+                usuarios.map((usuario) => {
+                    return usuarioId.push(usuario.id)
+                })
+                let ultimoId = Math.max(...usuarioId);
+                let ultimoUsuario = usuarios.filter((usuario) => {return usuario.id === ultimoId});
+                setusuario(ultimoUsuario);
+            })
+            .catch(err => console.log(err))
+    }, [usuarios]);
+
     return (
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">

@@ -10,6 +10,16 @@ function ProductList () {
             })
             .catch(err => console.log(err))
     }, []);
+
+    useEffect(() => {
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/products')
+            .then(resultado => {return resultado.json()})
+            .then(vehiculoss => {
+                setVehiculos(vehiculoss)
+            })
+            .catch(err => console.log(err))
+    }, [vehiculos]);
+
     return (
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">

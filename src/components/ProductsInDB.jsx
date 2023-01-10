@@ -8,7 +8,15 @@ function ProductsInDB () {
             .then(total => {
                 setVehiculos(total)
             })
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/vehiculosCantidad')
+            .then(resultado => resultado.json())
+            .then(total => {
+                setVehiculos(total)
+            })
+    }, [vehiculos])
     return (
         <div className="col-md-4 mb-4">
             <div className="card border-left-primary shadow h-100 py-2">

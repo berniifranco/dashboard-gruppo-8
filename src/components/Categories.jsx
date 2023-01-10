@@ -10,6 +10,16 @@ function Categories () {
             })
             .catch(err => console.log(err))
     }, []);
+
+    useEffect(() => {
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/categoriasVehiculo')
+            .then(resultado => {return resultado.json()})
+            .then(categorias => {
+                setCategorias(categorias)
+            })
+            .catch(err => console.log(err))
+    }, [categorias]);
+
     return (
         <div className="col-lg-6 mb-4">						
             <div className="card shadow mb-4">

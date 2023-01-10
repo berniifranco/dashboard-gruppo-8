@@ -3,7 +3,7 @@ import React, {useState ,useEffect} from 'react';
 function ProductsInDB () {
     const [vehiculos, setVehiculos] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3005/api/vehiculosCantidad')
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/vehiculosCantidad')
             .then(resultado => resultado.json())
             .then(total => {
                 setVehiculos(total)

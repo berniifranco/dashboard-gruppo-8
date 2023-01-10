@@ -4,7 +4,7 @@ function AmmountInProducts () {
 
     const [marcas, setMarcas] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3005/api/marcasCantidad')
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/marcasCantidad')
             .then(resultado => {return resultado.json()})
             .then(marcas => {
                 setMarcas(marcas);
@@ -19,7 +19,7 @@ function AmmountInProducts () {
                     <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
                             <div className="text-xs font-weight-bold text-success text-uppercase mb-1"> Cantidad de Marcas </div>
-                            <div className="h5 mb-0 font-weight-bold text-gray-800">{marcas}</div>
+                            <div className="h5 mb-0 font-weight-bold text-gray-800">{marcas.length === 0 && 'Cargando...'}{marcas}</div>
                         </div>
                         <div className="col-auto">
                             <i className="fas fa-dollar-sign fa-2x text-gray-300"></i>

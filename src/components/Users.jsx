@@ -5,7 +5,7 @@ function Users () {
 
     const [usuarios, setUsuarios] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3005/api/usuariosCantidad')
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/usuariosCantidad')
             .then(resultado => {return resultado.json()})
             .then(usuarios => {
                 setUsuarios(usuarios);

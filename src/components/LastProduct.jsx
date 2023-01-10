@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 function LastProduct () {
     const [vehiculos, setVehiculos] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3005/api/products')
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/products')
             .then(resultado => {return resultado.json()})
             .then(vehiculoss => {
                 let camionId = [];

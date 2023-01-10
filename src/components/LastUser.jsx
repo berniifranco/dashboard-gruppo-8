@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 function LasUser () {
     const [usuarios, setusuario] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3005/api/usuarios')
+        fetch('https://grupo-8-rentatruck-lakc.onrender.com/api/usuarios')
             .then(resultado => {return resultado.json()})
             .then(usuarios => {
                 let usuarioId = [];
